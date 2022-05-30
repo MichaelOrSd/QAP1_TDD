@@ -6,14 +6,22 @@
 
 package com.keyin;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ShoppingCart {
 
-    private final List<Item> items;
+    private List<Item> items;
+
+    public void ShoppingCart() {
+        this.items = new ArrayList<Item>();
+    }
 
     public ShoppingCart(List<Item> items) {
         this.items = items;
+    }
+
+    public ShoppingCart() {
     }
 
     public double getTotal() {
@@ -21,7 +29,11 @@ public class ShoppingCart {
     }
 
     public Object getItems() {
-        return null;
+        if (items == null) {
+            return "Empty";
+        } else {
+            return "Not Empty";
+        }
     }
 
     public boolean addItem(Item item) {
@@ -32,5 +44,4 @@ public class ShoppingCart {
             return true;
         }
     }
-    
 }
