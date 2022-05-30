@@ -9,11 +9,14 @@ public class ShoppingCartEmptyTest {
     
     private void assertArrayEquals(Item[] items, Object items2) {
     }
-    
+
     @Test
     public void isEmpty() {
         ShoppingCart cart = new ShoppingCart(new ArrayList<Item>());
         assertArrayEquals(new Item[] {}, cart.getItems());
+        System.out.println(cart.getItems());
+        System.out.println(cart.getTotal());
+        System.out.println(cart.addItem(new Item(1.0, 1)));
     }
 
     @Test

@@ -25,7 +25,12 @@ public class ShoppingCart {
     }
 
     public boolean addItem(Item item) {
-        return false;
+        if (item == null) {
+            return false;
+        } else {
+            items.add(item);
+            return true;
+        }
     }
     
 }
