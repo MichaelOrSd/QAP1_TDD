@@ -7,6 +7,9 @@ import org.junit.jupiter.api.Test;
 
 public class ShoppingCartEmptyTest {
     
+    private void assertArrayEquals(Item[] items, Object items2) {
+    }
+    
     @Test
     public void isEmpty() {
         ShoppingCart cart = new ShoppingCart(new ArrayList<Item>());
@@ -25,6 +28,4 @@ public class ShoppingCartEmptyTest {
         assertArrayEquals(new Item[] {new Item(100.0, 2)}, cart.getItems());
     }
 
-    private void assertArrayEquals(Item[] items, Object items2) {
-    }
 }

@@ -12,7 +12,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 public class ShoppingCartTest {
-    
+        
+    private ShoppingCart buildCartWithItems(Item... items) {
+    return new ShoppingCart(Arrays.asList(items));
+    } 
+
     @Test 
     public void totalOfEmptyCart() {
         ShoppingCart cart = buildCartWithItems();
@@ -37,7 +41,4 @@ public class ShoppingCartTest {
         assertEquals(200.0, cart.getTotal(), 0.0);
     }
     
-    private ShoppingCart buildCartWithItems(Item... items) {
-        return new ShoppingCart(Arrays.asList(items));
-    } 
 }
