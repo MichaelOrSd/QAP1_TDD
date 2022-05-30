@@ -12,30 +12,28 @@ public class ShoppingCartEmptyTest {
     private void assertArrayEquals(Item[] items, Object items2) {
     }
 
+    private void assertArrayEquals(Object items) {
+    }
+
     @Test
     public void isEmpty() {
         ShoppingCart cart = new ShoppingCart(new ArrayList<Item>());
-        cart.addItem(item);
         assertArrayEquals(new Item[] {}, cart.getItems());
-        System.out.println(cart.getItems());
-        System.out.println(cart.getTotal());
-        
+        System.out.println("Should be not Empty = " + cart.getItems());        
     }
 
     @Test
     public void isNotEmpty() {
         ShoppingCart cart = new ShoppingCart();
         assertArrayEquals(cart.getItems());
-        System.out.println(cart.getItems());
-    }
-
-    private void assertArrayEquals(Object items) {
+        System.out.println("Should be Empty = " + cart.getItems());
     }
 
     @Test
     public void isNotEmptyWithQuantityTwo() {
         ShoppingCart cart = new ShoppingCart(Arrays.asList(new Item(100.0, 2)));
         assertArrayEquals(new Item[] {new Item(100.0, 2)}, cart.getItems());
+        System.out.println("Should be not Empty = " + cart.getItems());
     }
 
 }
